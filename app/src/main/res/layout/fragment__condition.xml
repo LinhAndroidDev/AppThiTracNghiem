@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.login.Fragment_Condition">
+
+    <TextView
+        android:text="Điều khoản và Điều kiện sử dụng"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="81dp"
+        android:layout_width="250dp"
+        android:layout_height="76dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_marginTop="24dp"
+        android:text="Quyền Sở Hữu Trí Tuệ: tất cả các sáng chế, quyền đối với các phát minh, giải pháp hữu ích, bản quyền và các quyền liên quan, nhãn hiệu hàng hóa, nhãn hiệu dịch vụ, tên thương mại, tên kinh doanh và tên miền, quyền đối với hình dáng sản phẩm hoặc kiểu dáng thương mại, quyền về danh tiếng hoặc quyền khởi kiện về sự giả mạo, quyền về cạnh tranh không lành mạnh, quyền về thiết kế, quyền đối với phần mềm tin học, quyền cơ sở dữ liệu, quyền đối với thiết kế bố trí mạch tích hợp, quyền về đạo đức, quyền đối với thông tin bảo mật (bao gồm bí quyết và bí mật kinh doanh) và bất kỳ quyền sở hữu trí tuệ nào khác, trong mỗi trường hợp dù có đăng ký hay không và bao gồm các đơn và gia hạn, đòi lại hoặc mở rộng các quyền này, và mọi quyền hoặc hình thức bảo hộ tương tự hoặc tương đương tại bất cứ nơi nào trên thế giới."
+        android:textSize="17dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/backLogin"
+            android:text="Trở lại"
+            android:textSize="18dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/bg_button"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </RelativeLayout>
+</LinearLayout>
