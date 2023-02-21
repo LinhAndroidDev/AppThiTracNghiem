@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/ic_menu_private"
-        android:title="Công khai"
-        android:icon="@drawable/icon_public"/>
-    <item android:id="@+id/ic_menu_public"
-        android:title="Riêng tư"
-        android:icon="@drawable/icon_private"/>
-</menu>
