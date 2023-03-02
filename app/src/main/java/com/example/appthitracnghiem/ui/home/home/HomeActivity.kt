@@ -1,10 +1,10 @@
 package com.example.appthitracnghiem.ui.home.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MotionEvent
 import androidx.fragment.app.Fragment
 import com.example.appthitracnghiem.R
+import com.example.appthitracnghiem.model.CheckShowTutorial
+import com.example.appthitracnghiem.ui.base.BaseActivity
 import com.example.appthitracnghiem.ui.base.BaseFragment
 import com.example.appthitracnghiem.ui.home.category.FragmentCategory
 import com.example.appthitracnghiem.ui.home.createtest.FragmentCreateTest
@@ -12,16 +12,18 @@ import com.example.appthitracnghiem.ui.home.historytest.FragmentHistory
 import com.example.appthitracnghiem.ui.home.profile.FragmentProfile
 import kotlinx.android.synthetic.main.activity_home_page.*
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
+    var CHECK_SHOW_TUTORIAL : String = "CHECK_SHOW_TUTORIAL"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
+        val checkShowTutorial : CheckShowTutorial = CheckShowTutorial(this@HomeActivity)
+        checkShowTutorial.putBooleanValue("CHECK_SHOW_TUTORIAL",true)
+
         resetTab()
         functionHome.isSelected = true
         replaceFragment(FragmentHome())
-
-        overridePendingTransition(R.anim.anim_translate_enter_right, R.anim.anim_translate_exit_left)
 
         bottom_wrap?.setOnTouchListener { _, _ ->  true }
 
@@ -127,10 +129,5 @@ class HomeActivity : AppCompatActivity() {
             super.onBackPressed()
             setSelectIcon()
         }
-    }
-
-    override fun finish() {
-        super.finish()
-        overridePendingTransition(R.anim.anim_translate_enter_left, R.anim.anim_translate_exit_right)
     }
 }

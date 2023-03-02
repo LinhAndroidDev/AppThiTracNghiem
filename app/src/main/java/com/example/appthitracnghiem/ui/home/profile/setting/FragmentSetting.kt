@@ -1,16 +1,22 @@
 package com.example.appthitracnghiem.ui.home.profile.setting
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
-import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.Fragment
 import com.example.appthitracnghiem.R
 import com.example.appthitracnghiem.ui.base.BaseFragment
+import com.example.appthitracnghiem.ui.intro.IntroLoginActivity
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import kotlinx.android.synthetic.main.fragment_create_test.*
 import kotlinx.android.synthetic.main.fragment_setting.*
+import kotlinx.android.synthetic.main.layout_bottom_share.*
+import kotlinx.android.synthetic.main.layout_logout.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -47,6 +53,8 @@ class FragmentSetting : BaseFragment() {
         changePassWord.setOnClickListener {
             replaceFragment(FragmentSettingNewPassword())
         }
+
+        setBottomShare()
     }
 
     private fun replaceFragment(fm : Fragment){
@@ -79,7 +87,34 @@ class FragmentSetting : BaseFragment() {
     /** set font*/
     private fun setText() {
         val semibold : Typeface? = ResourcesCompat.getFont(requireActivity(),R.font.svn_gilroy_semibold)
-        txtCaiDat.typeface = semibold
+        txtSetting.typeface = semibold
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private fun setBottomShare() {
+        val bottomShareBehavior = BottomSheetBehavior.from(layoutLogout)
+        logout.setOnClickListener {
+            if(bottomShareBehavior.state != BottomSheetBehavior.STATE_EXPANDED){
+                bottomShareBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+            }else{
+                bottomShareBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+            }
+        }
+
+        layoutLogout.setOnTouchListener { v, event ->
+            bottomShareBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+            true
+        }
+
+        logoutNow.setOnClickListener {
+            val intent : Intent = Intent(requireActivity(),IntroLoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+
+        cancel.setOnClickListener {
+            bottomShareBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+        }
     }
 
     companion object {

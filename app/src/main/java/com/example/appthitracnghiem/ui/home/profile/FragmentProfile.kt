@@ -3,11 +3,11 @@ package com.example.appthitracnghiem.ui.home.profile
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
+import androidx.fragment.app.Fragment
 import com.example.appthitracnghiem.R
 import com.example.appthitracnghiem.ui.base.BaseFragment
 import com.example.appthitracnghiem.ui.home.profile.setting.SettingActivity
@@ -40,7 +40,17 @@ class FragmentProfile : BaseFragment() {
             startActivity(intent)
         }
 
+        progressNumberDay.progress = 80
+
+        percentColum(30,80,60)
+
         setText()
+    }
+
+    private fun percentColum(math : Int, science : Int, painting : Int) {
+        progressMath.progress = math.toFloat()
+        progressScience.progress = science.toFloat()
+        progressPainting.progress = painting.toFloat()
     }
 
     private fun setText() {

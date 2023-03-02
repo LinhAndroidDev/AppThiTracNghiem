@@ -24,8 +24,8 @@
         <TextView
             android:id="@+id/textTitleCategory"
             android:layout_centerHorizontal="true"
-            android:text="Tìm kiếm"
-            android:textSize="24dp"
+            android:text="@string/txtSearch"
+            android:textSize="24sp"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -42,13 +42,14 @@
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tìm kiếm môn học"
-            android:textColorHint="#E8E8E8"
+            android:hint="@string/txtSearchSubject"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:paddingVertical="16dp"
-            android:paddingLeft="56dp"
-            android:paddingRight="24dp"
+            android:paddingStart="56dp"
+            android:paddingEnd="24dp"
             android:background="@drawable/bg_search"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:inputType="text"
             />
         <ImageView
@@ -75,18 +76,18 @@
                     android:layout_height="match_parent">
                     <TextView
                         android:id="@+id/textSubject"
-                        android:text="Tìm kiếm gần đây"
-                        android:textColor="#292929"
-                        android:textSize="20dp"
+                        android:text="@string/txtSearchRecent"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:layout_marginTop="4dp"
-                        android:text="Xoá tất cả"
-                        android:textSize="14dp"
+                        android:text="@string/txtDeleteAll"
+                        android:textSize="14sp"
                         android:textColor="@color/backgroundIntro"
-                        android:layout_marginRight="16dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_alignParentEnd="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <androidx.recyclerview.widget.RecyclerView

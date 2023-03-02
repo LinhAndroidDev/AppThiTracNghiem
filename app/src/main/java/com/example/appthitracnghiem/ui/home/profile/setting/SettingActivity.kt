@@ -1,19 +1,17 @@
 package com.example.appthitracnghiem.ui.home.profile.setting
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.appthitracnghiem.R
+import com.example.appthitracnghiem.ui.base.BaseActivity
 import com.example.appthitracnghiem.ui.base.BaseFragment
 
-class SettingActivity : AppCompatActivity() {
+class SettingActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
 
         replaceFragment(FragmentSetting())
-
-        overridePendingTransition(R.anim.anim_translate_enter_right, R.anim.anim_translate_exit_left)
     }
 
     /** Replace Fragment*/
@@ -35,10 +33,5 @@ class SettingActivity : AppCompatActivity() {
         } else{
             super.onBackPressed()
         }
-    }
-
-    override fun finish() {
-        super.finish()
-        overridePendingTransition(R.anim.anim_translate_enter_left, R.anim.anim_translate_exit_right)
     }
 }

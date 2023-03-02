@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragmentSetting"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.home.profile.setting.FragmentSetting">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="72dp">
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="72dp"
             android:orientation="vertical">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -24,17 +25,17 @@
                     android:layout_width="30dp"
                     android:layout_height="25dp"/>
                 <TextView
-                    android:id="@+id/txtCaiDat"
-                    android:text="Cài đặt"
-                    android:textSize="24dp"
-                    android:textColor="#111"
+                    android:id="@+id/txtSetting"
+                    android:text="@string/txtSetting"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
                     android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RelativeLayout>
             <TextView
-                android:text="Tài khoản"
-                android:textSize="14dp"
+                android:text="@string/txtAccount"
+                android:textSize="14sp"
                 android:layout_marginTop="24dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -61,24 +62,24 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:orientation="vertical">
                             <TextView
-                                android:text="Cập nhật thông tin"
-                                android:textSize="16dp"
-                                android:textColor="#111"
+                                android:text="@string/txtUpdateInfor"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:text="Cập nhật tên,tuổi..."
-                                android:textSize="14dp"
+                                android:text="@string/txtUpdateNameAge"
+                                android:textSize="14sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
                     </LinearLayout>
                     <ImageView
-                        android:layout_marginRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/icon_next_black"
                         android:layout_width="20dp"
@@ -110,24 +111,24 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:orientation="vertical">
                             <TextView
-                                android:text="Đổi địa chỉ Email"
-                                android:textSize="16dp"
-                                android:textColor="#111"
+                                android:text="@string/txtChangeEmail"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:text="nguyenlinh07082001bn@gmail.com"
-                                android:textSize="14dp"
+                                android:text="@string/txtEmail"
+                                android:textSize="14sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
                     </LinearLayout>
                     <ImageView
-                        android:layout_marginRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/icon_next_black"
                         android:layout_width="20dp"
@@ -159,24 +160,24 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:orientation="vertical">
                             <TextView
-                                android:text="Đổi mật khẩu"
-                                android:textSize="16dp"
-                                android:textColor="#111"
+                                android:text="@string/txtChangePassword"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:text="Lần cuối thay đổi 1 tháng trước"
-                                android:textSize="14dp"
+                                android:text="@string/txtInforChangePassword"
+                                android:textSize="14sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
                     </LinearLayout>
                     <ImageView
-                        android:layout_marginRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/icon_next_black"
                         android:layout_width="20dp"
@@ -208,24 +209,24 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:orientation="vertical">
                             <TextView
-                                android:text="Xoá tài khoản"
-                                android:textSize="16dp"
-                                android:textColor="#111"
+                                android:text="@string/txtDeleteAccount"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:text="Không thể hoàn tác"
-                                android:textSize="14dp"
+                                android:text="@string/txtCanntRefund"
+                                android:textSize="14sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
                     </LinearLayout>
                     <ImageView
-                        android:layout_marginRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/icon_next_black"
                         android:layout_width="20dp"
@@ -234,8 +235,8 @@
 
             </androidx.cardview.widget.CardView>
             <TextView
-                android:text="Khác"
-                android:textSize="14dp"
+                android:text="@string/txtOther"
+                android:textSize="14sp"
                 android:layout_marginTop="24dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -244,15 +245,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp">
                 <TextView
-                    android:text="Thông báo ứng dụng"
-                    android:textSize="16dp"
-                    android:textColor="#111"
+                    android:text="@string/txtNoficationApp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <androidx.appcompat.widget.SwitchCompat
                     app:track="@drawable/bg_track"
                     android:thumb="@drawable/bg_thumb"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RelativeLayout>
@@ -280,24 +281,24 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:orientation="vertical">
                             <TextView
-                                android:text="Mức độ ưu tiên"
-                                android:textSize="16dp"
-                                android:textColor="#111"
+                                android:text="@string/txtModePriority"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:text="Hiển thị hoặc ẩn"
-                                android:textSize="14dp"
+                                android:text="@string/txtShowOrHide"
+                                android:textSize="14sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
                     </LinearLayout>
                     <ImageView
-                        android:layout_marginRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/icon_next_black"
                         android:layout_width="20dp"
@@ -329,24 +330,24 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:orientation="vertical">
                             <TextView
-                                android:text="Câu hỏi thường gặp"
-                                android:textSize="16dp"
-                                android:textColor="#111"
+                                android:text="@string/txtQuestionSometimesSee"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:text="Câu hỏi thường gặp nhất"
-                                android:textSize="14dp"
+                                android:text="@string/txtQuestionBest"
+                                android:textSize="14sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
                     </LinearLayout>
                     <ImageView
-                        android:layout_marginRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/icon_next_black"
                         android:layout_width="20dp"
@@ -357,8 +358,8 @@
 
             <TextView
                 android:id="@+id/logout"
-                android:text="Đăng xuất"
-                android:textSize="16dp"
+                android:text="@string/txtLogout"
+                android:textSize="16sp"
                 android:textColor="@color/color_logout"
                 android:layout_marginTop="32dp"
                 android:layout_gravity="center_horizontal"
@@ -369,5 +370,5 @@
                 android:layout_height="54dp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-</LinearLayout>
+    <include layout="@layout/layout_logout"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

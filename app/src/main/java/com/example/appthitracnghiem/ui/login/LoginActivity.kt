@@ -1,20 +1,23 @@
 package com.example.appthitracnghiem.ui.login
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.appthitracnghiem.R
+import com.example.appthitracnghiem.model.CheckShowTutorial
+import com.example.appthitracnghiem.ui.base.BaseActivity
 import com.example.appthitracnghiem.ui.base.BaseFragment
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
+    var CHECK_SHOW_TUTORIAL : String = "CHECK_SHOW_TUTORIAL"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        replaceFragmentLogin(Fragment_Login())
+        val checkShowTutorial : CheckShowTutorial = CheckShowTutorial(this@LoginActivity)
+        checkShowTutorial.putBooleanValue("CHECK_SHOW_TUTORIAL",false)
 
-        overridePendingTransition(R.anim.anim_translate_enter_right, R.anim.anim_translate_exit_left)
+        replaceFragmentLogin(Fragment_Login())
     }
 
     companion object fun replaceFragmentLogin(fragment : Fragment){
@@ -35,10 +38,5 @@ class LoginActivity : AppCompatActivity() {
         } else {
             super.onBackPressed()
         }
-    }
-
-    override fun finish() {
-        super.finish()
-        overridePendingTransition(R.anim.anim_translate_enter_left, R.anim.anim_translate_exit_right)
     }
 }

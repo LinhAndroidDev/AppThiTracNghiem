@@ -33,9 +33,9 @@
                 android:paddingVertical="12dp"
                 android:background="@drawable/boder_setting_new_password">
                 <TextView
-                    android:text="ID:13579"
-                    android:textSize="16dp"
-                    android:textColor="#121212"
+                    android:text="@string/txtIDShare"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
                     android:layout_marginStart="26dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -49,6 +49,7 @@
                     />
             </RelativeLayout>
             <LinearLayout
+                android:id="@+id/shareWithFacebook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -60,16 +61,17 @@
                     android:src="@drawable/icon_facebook"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginRight="15dp"/>
+                    android:layout_marginEnd="15dp"/>
                 <TextView
-                    android:text="Chia sẻ qua Facebook"
-                    android:textSize="16dp"
-                    android:textColor="#121212"
+                    android:text="@string/txtShareWithFace"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/shareWithMail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -81,11 +83,11 @@
                     android:src="@drawable/icon_google"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginRight="15dp"/>
+                    android:layout_marginEnd="15dp"/>
                 <TextView
-                    android:text="Đăng nhập bằng Mail"
-                    android:textSize="16dp"
-                    android:textColor="#121212"
+                    android:text="@string/txtShareWithMail"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />

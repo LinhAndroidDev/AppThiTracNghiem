@@ -4,7 +4,7 @@
         <shape android:shape="oval">
             <solid android:color="@color/white"/>
             <stroke android:width="2dp"
-                android:color="@color/bg_switch_check"/>
+                android:color="@color/backgroundIntro"/>
             <size android:height="25dp"
                 android:width="25dp"/>
         </shape>

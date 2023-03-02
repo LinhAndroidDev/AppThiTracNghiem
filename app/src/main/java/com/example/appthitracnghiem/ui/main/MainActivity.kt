@@ -1,44 +1,51 @@
 package com.example.appthitracnghiem.ui.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
 import com.example.appthitracnghiem.R
+import com.example.appthitracnghiem.model.CheckShowTutorial
 import com.example.appthitracnghiem.model.MySharedPreferences
-import com.example.appthitracnghiem.ui.intro.IntroActivity
+import com.example.appthitracnghiem.ui.home.home.HomeActivity
+import com.example.appthitracnghiem.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    var KEY_FIRST_INSTALL : String ="KEY_FIRST_INSTALL"
+    var KEY_FIRST_INSTALL : String = "KEY_FIRST_INSTALL"
+    var CHECK_SHOW_TUTORIAL : String = "CHECK_SHOW_TUTORIAL"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var mySharedPreferences : MySharedPreferences = MySharedPreferences(this@MainActivity)
+        val mySharedPreferences : MySharedPreferences = MySharedPreferences(this@MainActivity)
+        val checkShowTutorial : CheckShowTutorial = CheckShowTutorial(this@MainActivity)
 
-        var anim_logo : Animation = AnimationUtils.loadAnimation(this@MainActivity,R.anim.anim_logo)
+        val anim_logo : Animation = AnimationUtils.loadAnimation(this@MainActivity,R.anim.anim_logo)
         logo.startAnimation(anim_logo)
 
-        var countDownTimer : CountDownTimer = object : CountDownTimer(3000,3000){
+        val countDownTimer : CountDownTimer = object : CountDownTimer(3000,3000){
             override fun onTick(millisUntilFinished: Long) {
 
             }
 
             override fun onFinish() {
-//                if(mySharedPreferences.getBooleanValue(KEY_FIRST_INSTALL)){
-//                    var intent : Intent = Intent(this@MainActivity,LoginActivity::class.java)
-//                    startActivity(intent)
-//                    finish()
-//                }else{
-                    var intent : Intent = Intent(this@MainActivity,IntroActivity::class.java)
-                    startActivity(intent)
-                    finish()
-//                    mySharedPreferences.putBooleanValue(KEY_FIRST_INSTALL,true)
-//                }
+                if(mySharedPreferences.getBooleanValue(KEY_FIRST_INSTALL)){
+                    if(checkShowTutorial.getBooleanValue(CHECK_SHOW_TUTORIAL)){
+                        val intent : Intent = Intent(this@MainActivity, HomeActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }else{
+                        val intent : Intent = Intent(this@MainActivity, LoginActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                }else{
+                    mySharedPreferences.putBooleanValue(KEY_FIRST_INSTALL,true)
+                }
             }
 
         }

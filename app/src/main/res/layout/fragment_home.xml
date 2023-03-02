@@ -27,15 +27,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
-                    android:text="Xin Chào"
-                    android:textSize="17dp"
+                    android:text="@string/txtHello"
+                    android:textSize="17sp"
                     android:textColor="@color/white"
                     android:layout_marginTop="17dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:text="Hà Hữu Hải"
-                    android:textSize="25dp"
+                    android:text="@string/txtNameUser"
+                    android:textSize="25sp"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/white"
                     android:textStyle="bold"
@@ -52,9 +52,9 @@
                         android:padding="20dp"
                         android:orientation="vertical">
                         <TextView
-                            android:text="Gần đây"
-                            android:textSize="18dp"
-                            android:textColor="#DA6C7F"
+                            android:text="@string/recent"
+                            android:textSize="18sp"
+                            android:textColor="@color/pale_brown"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <LinearLayout
@@ -67,11 +67,11 @@
                                 android:layout_width="28dp"
                                 android:layout_height="28dp"/>
                             <TextView
-                                android:text="Âm nhạc cơ bản"
-                                android:textColor="#7b1c2d"
+                                android:text="@string/base_music"
+                                android:textColor="@color/brown"
                                 android:textStyle="bold"
-                                android:textSize="20dp"
-                                android:layout_marginLeft="5dp"
+                                android:textSize="20sp"
+                                android:layout_marginStart="5dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
@@ -94,17 +94,17 @@
                         <TextView
                             android:layout_marginTop="27dp"
                             android:layout_gravity="center"
-                            android:text="NỔI BẬT"
-                            android:textSize="19dp"
-                            android:textColor="#E3E3E3"
+                            android:text="@string/txtHightLight"
+                            android:textSize="19sp"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <TextView
                             android:id="@+id/textHome"
                             android:layout_marginTop="20dp"
-                            android:text="Tham gia giải bài tập với nhiều dạng đề khác nhau từ mọi người"
-                            android:textSize="20dp"
-                            android:textColor="#F4F4F4"
+                            android:text="@string/txtTitleHome"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
                             android:textStyle="bold"
                             android:layout_marginHorizontal="60dp"
                             android:gravity="center"
@@ -123,11 +123,11 @@
                                 android:src="@drawable/circle"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
-                                android:layout_marginRight="10dp"/>
+                                android:layout_marginEnd="10dp"/>
                             <TextView
-                                android:text="Tìm ID"
-                                android:textSize="18dp"
-                                android:textColor="#6a5ae0"
+                                android:text="@string/txtFindID"
+                                android:textSize="18sp"
+                                android:textColor="@color/color_purple"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
@@ -153,27 +153,28 @@
                         android:layout_marginHorizontal="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <ProgressBar
+                        <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
                             android:id="@+id/loadingQuiz"
-                            android:layout_marginTop="60dp"
+                            android:layout_marginTop="70dp"
                             android:layout_marginBottom="120dp"
                             android:layout_centerHorizontal="true"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:visibility="invisible"/>
+                            android:visibility="invisible"
+                            app:type="chrome_floating_circles"/>
                         <TextView
                             android:id="@+id/textQuizHome"
-                            android:text="Câu đố trực tiếp"
-                            android:textColor="#292929"
-                            android:textSize="23dp"
+                            android:text="@string/txtQuestionDirect"
+                            android:textColor="@color/black"
+                            android:textSize="23sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <TextView
-                            android:text="Xem tất cả"
+                            android:text="@string/txtSeeAll"
                             android:layout_marginTop="3dp"
-                            android:textColor="#6a5ae0"
-                            android:textSize="18dp"
-                            android:layout_alignParentRight="true"
+                            android:textColor="@color/color_purple"
+                            android:textSize="18sp"
+                            android:layout_alignParentEnd="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <androidx.recyclerview.widget.RecyclerView

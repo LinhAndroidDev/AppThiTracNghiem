@@ -6,11 +6,11 @@ import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.appthitracnghiem.R
 import com.example.appthitracnghiem.ui.base.BaseFragment
@@ -64,24 +64,25 @@ class Fragment_Login : BaseFragment() {
 
     private fun clickLogin() {
         registerNow.setOnClickListener {
-            var intent: Intent = Intent(activity, RegisterActivity::class.java)
+            val intent: Intent = Intent(activity, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         login.setOnClickListener {
-            var intent : Intent = Intent(requireActivity(), HomeActivity::class.java)
+            val intent : Intent = Intent(requireActivity(), HomeActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
 
         google.setOnClickListener{
-            var intent : Intent = Intent()
+            val intent : Intent = Intent()
             intent.setAction(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://accounts.google.com/v3/signin/identifier?dsh=S-620025444%3A1673854670857931&authuser=0&continue=http%3A%2F%2Fsupport.google.com%2Fmail%2Fanswer%2F8494%3Fhl%3Dvi%26co%3DGENIE.Platform%253DDesktop&ec=GAlAdQ&hl=vi&flowName=GlifWebSignIn&flowEntry=AddSession")
             startActivity(intent)
         }
 
         facebook.setOnClickListener{
-            var intent : Intent = Intent()
+            val intent : Intent = Intent()
             intent.setAction(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://www.facebook.com")
             startActivity(intent)

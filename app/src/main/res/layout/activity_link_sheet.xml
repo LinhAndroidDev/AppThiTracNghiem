@@ -26,17 +26,17 @@
                     android:layout_height="25dp"/>
                 <TextView
                     android:id="@+id/txtGoogleSheet"
-                    android:text="Google Sheet"
-                    android:textSize="24dp"
-                    android:textColor="#111"
+                    android:text="@string/googleSheet"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
                     android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RelativeLayout>
             <TextView
-                android:text="Nhập link Google Sheet"
-                android:textSize="14dp"
-                android:textColor="#111"
+                android:text="@string/txtEnterLink"
+                android:textSize="14sp"
+                android:textColor="@color/black"
                 android:layout_marginTop="40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -48,13 +48,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/boder_setting_new_password"
-                    android:hint="https://192.168.1.10"
+                    android:hint="@string/txtLink"
                     android:inputType="textEmailAddress"
                     android:paddingVertical="16dp"
-                    android:paddingLeft="56dp"
-                    android:paddingRight="50dp"
-                    android:textColorHint="#858494"
-                    android:textSize="16dp"
+                    android:paddingStart="56dp"
+                    android:paddingEnd="50dp"
+                    android:textColorHint="@color/color_number_position"
+                    android:textSize="16sp"
                     />
                 <ImageView
                     android:src="@drawable/icon_sheet"

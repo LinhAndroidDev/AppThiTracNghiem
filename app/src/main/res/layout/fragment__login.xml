@@ -10,17 +10,17 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
-            android:text="Đăng nhập"
-            android:textSize="30dp"
+            android:text="@string/login"
+            android:textSize="30sp"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_marginTop="81dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
-            android:text="Email hoặc số điện thoại"
-            android:textSize="16dp"
-            android:textColor="#111"
+            android:text="@string/txtEmailOrPhone"
+            android:textSize="16sp"
+            android:textColor="@color/black"
             android:layout_marginTop="88dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -30,18 +30,18 @@
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/background_edittext"
-            android:hint="Email hoặc số điện thoại"
+            android:hint="@string/txtEmailOrPhone"
             android:inputType="textEmailAddress"
-            android:paddingLeft="20dp"
-            android:paddingRight="50dp"
-            android:textColor="#111"
-            android:textColorHint="#424242"
-            android:textSize="18dp" />
+            android:paddingStart="20dp"
+            android:paddingEnd="50dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_to_do_late"
+            android:textSize="18sp" />
 
         <TextView
-            android:text="Mật khẩu"
-            android:textSize="16dp"
-            android:textColor="#111"
+            android:text="@string/password"
+            android:textSize="16sp"
+            android:textColor="@color/black"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -56,20 +56,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/background_edittext"
-                android:hint="Mật khẩu"
+                android:hint="@string/password"
                 android:inputType="textPassword"
-                android:paddingLeft="20dp"
-                android:paddingRight="50dp"
-                android:textColor="#111"
-                android:textColorHint="#424242"
-                android:textSize="18dp" />
+                android:paddingStart="20dp"
+                android:paddingEnd="50dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_to_do_late"
+                android:textSize="18sp" />
 
             <ImageButton
                 android:id="@+id/hidePasswordLogin"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/icon_hint_grey"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_width="25dp"
                 android:layout_height="25dp"/>
         </RelativeLayout>
@@ -80,9 +80,9 @@
             android:layout_height="wrap_content">
             <CheckBox
                 android:button="@drawable/select_checkbox"
-                android:text="Nhớ mật khẩu"
-                android:textColor="#111"
-                android:textSize="16dp"
+                android:text="@string/txtRememberPassword"
+                android:textColor="@color/black"
+                android:textSize="16sp"
                 android:padding="5dp"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"/>
@@ -91,19 +91,18 @@
                 android:id="@+id/forgetPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="0dp"
+                android:layout_alignParentEnd="true"
                 android:background="@drawable/bg_forgetpassword"
-                android:text="Quên mật khẩu"
-                android:textColor="#111"
-                android:textSize="16dp" />
+                android:text="@string/txtForgetPassword"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
         </RelativeLayout>
         <Button
             android:id="@+id/login"
-            android:text="Đăng nhập"
-            android:textSize="18dp"
+            android:text="@string/login"
+            android:textSize="18sp"
             android:background="@drawable/bg_button"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textAllCaps="false"
             android:layout_marginTop="45dp"
             android:layout_width="match_parent"
@@ -124,9 +123,9 @@
                 android:layout_marginRight="15dp"/>
             <TextView
                 android:id="@+id/textGoogle"
-                android:text="Đăng nhập bằng Google"
-                android:textSize="16dp"
-                android:textColor="#4C4C4C"
+                android:text="@string/txtLoginWithGoogle"
+                android:textSize="16sp"
+                android:textColor="@color/color_login_other"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 />
@@ -144,12 +143,12 @@
                 android:src="@drawable/icon_facebook"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginEnd="15dp"/>
             <TextView
                 android:id="@+id/textFacebook"
-                android:text="Đăng nhập bằng Facebook"
-                android:textSize="16dp"
-                android:textColor="#4C4C4C"
+                android:text="@string/txtLoginWithFacebook"
+                android:textSize="16sp"
+                android:textColor="@color/color_login_other"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 />
@@ -168,16 +167,16 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:src="@drawable/icon_apple" />
 
             <TextView
                 android:id="@+id/textApple"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Đăng nhập bằng Apple ID"
-                android:textColor="#4C4C4C"
-                android:textSize="16dp" />
+                android:text="@string/txtLoginWithApple"
+                android:textColor="@color/color_login_other"
+                android:textSize="16sp" />
         </LinearLayout>
 
             <LinearLayout
@@ -188,15 +187,16 @@
                 android:layout_alignParentBottom="true"
                 android:orientation="horizontal">
                 <TextView
-                    android:text="Không có tài khoản?"
-                    android:textColor="#111"
-                    android:textSize="16dp"
+                    android:text="@string/txtHaventAccount"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <TextView
+                ư                                                                                                                                                                                                                                                                                          <TextView
                     android:id="@+id/registerNow"
-                    android:text=" Đăng kí ngay"
-                    android:textSize="16dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/txtRegisterNow"
+                    android:textSize="16sp"
                     android:textColor="@color/backgroundIntro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>

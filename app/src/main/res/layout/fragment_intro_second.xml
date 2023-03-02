@@ -14,14 +14,14 @@
         android:layout_height="350dp"/>
     <TextView
         android:id="@+id/textIntroSecond"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_marginHorizontal="32dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="200dp"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:gravity="center"
-        android:text="Tìm các câu đố để kiểm tra kiến thức của bạn"
+        android:text="@string/txtIntroSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
